@@ -43,5 +43,10 @@ namespace UI
             toolStripStatusLabel2.Text = "Data: " + DateTime.Now.ToShortDateString();
             toolStripStatusLabel3.Text = "Hora: " + DateTime.Now.ToShortTimeString();
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

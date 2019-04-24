@@ -15,3 +15,6 @@ C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.pdb
 C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.frmLogin.resources
 C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.frmSplash.resources
 C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.frmPrincipal.resources
+C:\Users\admin\Documents\Adryan\siscar\UI\bin\Debug\UI.exe.config
+C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.exe
+C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.pdb
