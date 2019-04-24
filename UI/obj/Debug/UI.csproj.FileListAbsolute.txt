@@ -1,0 +1,17 @@
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\UI.exe.config
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\UI.exe
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\UI.pdb
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\BLL.dll
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\DAL.dll
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\Models.dll
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\BLL.pdb
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\DAL.pdb
+C:\Users\admin\Documents\Adryan\UI\bin\Debug\Models.pdb
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.exe
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.pdb
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.frmLogin.resources
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.frmSplash.resources
+C:\Users\admin\Documents\Adryan\UI\obj\Debug\UI.frmPrincipal.resources

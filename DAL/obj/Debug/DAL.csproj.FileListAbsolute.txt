@@ -1,0 +1,9 @@
+C:\Users\admin\Documents\Adryan\DAL\bin\Debug\DAL.dll
+C:\Users\admin\Documents\Adryan\DAL\bin\Debug\DAL.pdb
+C:\Users\admin\Documents\Adryan\DAL\bin\Debug\Models.dll
+C:\Users\admin\Documents\Adryan\DAL\bin\Debug\Models.pdb
+C:\Users\admin\Documents\Adryan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Adryan\DAL\obj\Debug\DAL.dll
+C:\Users\admin\Documents\Adryan\DAL\obj\Debug\DAL.pdb
+C:\Users\admin\Documents\Adryan\DAL\bin\Debug\DAL.dll.CodeAnalysisLog.xml
+C:\Users\admin\Documents\Adryan\DAL\bin\Debug\DAL.dll.lastcodeanalysissucceeded
