@@ -68,9 +68,16 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exibirBarraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.corDeFundoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.papelDeParedeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -189,12 +196,14 @@
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.calculadoraToolStripMenuItem.Text = "&Calculadora";
+            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
             // consultaDetranToolStripMenuItem
             // 
             this.consultaDetranToolStripMenuItem.Name = "consultaDetranToolStripMenuItem";
             this.consultaDetranToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.consultaDetranToolStripMenuItem.Text = "Consulta &Detran";
+            this.consultaDetranToolStripMenuItem.Click += new System.EventHandler(this.consultaDetranToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -206,12 +215,14 @@
             this.corDeFundoToolStripMenuItem.Name = "corDeFundoToolStripMenuItem";
             this.corDeFundoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.corDeFundoToolStripMenuItem.Text = "Cor de &Fundo";
+            this.corDeFundoToolStripMenuItem.Click += new System.EventHandler(this.corDeFundoToolStripMenuItem_Click);
             // 
             // papelDeParedeToolStripMenuItem
             // 
             this.papelDeParedeToolStripMenuItem.Name = "papelDeParedeToolStripMenuItem";
             this.papelDeParedeToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.papelDeParedeToolStripMenuItem.Text = "&Papel de Parede";
+            this.papelDeParedeToolStripMenuItem.Click += new System.EventHandler(this.papelDeParedeToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -220,17 +231,19 @@
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
             this.sairToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.sairToolStripMenuItem1.Text = "&Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.White;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
@@ -359,6 +372,7 @@
             this.toolStripButton5.Text = "Calculadora";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.ToolTipText = "Calculadora";
+            this.toolStripButton5.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
@@ -374,12 +388,53 @@
             this.toolStripButton6.Size = new System.Drawing.Size(89, 78);
             this.toolStripButton6.Text = "Sair";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton6.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exibirBarraToolStripMenuItem,
+            this.corDeFundoToolStripMenuItem1,
+            this.papelDeParedeToolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 70);
+            // 
+            // exibirBarraToolStripMenuItem
+            // 
+            this.exibirBarraToolStripMenuItem.Checked = true;
+            this.exibirBarraToolStripMenuItem.CheckOnClick = true;
+            this.exibirBarraToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.exibirBarraToolStripMenuItem.Name = "exibirBarraToolStripMenuItem";
+            this.exibirBarraToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.exibirBarraToolStripMenuItem.Text = "Exibir barra";
+            this.exibirBarraToolStripMenuItem.Click += new System.EventHandler(this.exibirBarraToolStripMenuItem_Click);
+            // 
+            // corDeFundoToolStripMenuItem1
+            // 
+            this.corDeFundoToolStripMenuItem1.Name = "corDeFundoToolStripMenuItem1";
+            this.corDeFundoToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.corDeFundoToolStripMenuItem1.Text = "Cor de fundo";
+            this.corDeFundoToolStripMenuItem1.Click += new System.EventHandler(this.corDeFundoToolStripMenuItem_Click);
+            // 
+            // papelDeParedeToolStripMenuItem1
+            // 
+            this.papelDeParedeToolStripMenuItem1.Name = "papelDeParedeToolStripMenuItem1";
+            this.papelDeParedeToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.papelDeParedeToolStripMenuItem1.Text = "Papel de parede";
+            this.papelDeParedeToolStripMenuItem1.Click += new System.EventHandler(this.papelDeParedeToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 332);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -398,6 +453,7 @@
             this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,5 +499,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem exibirBarraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem corDeFundoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem papelDeParedeToolStripMenuItem1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
