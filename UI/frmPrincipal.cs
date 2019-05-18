@@ -101,5 +101,11 @@ namespace UI
         {
 
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro_de_Clientes frmClientes1 = new Cadastro_de_Clientes();
+            frmClientes1.ShowDialog();
+        }
     }
 }

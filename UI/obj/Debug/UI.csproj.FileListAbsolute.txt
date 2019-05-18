@@ -26,10 +26,10 @@ C:\Users\admin\Documents\Adryan\siscar\UI\bin\Debug\Models.dll
 C:\Users\admin\Documents\Adryan\siscar\UI\bin\Debug\BLL.pdb
 C:\Users\admin\Documents\Adryan\siscar\UI\bin\Debug\DAL.pdb
 C:\Users\admin\Documents\Adryan\siscar\UI\bin\Debug\Models.pdb
-C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmLogin.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmPrincipal.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmSplash.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.Properties.Resources.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.Cadastro_de_Clientes.resources
+C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache

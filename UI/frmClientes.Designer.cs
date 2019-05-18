@@ -28,8 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_de_Clientes));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbESTADO = new System.Windows.Forms.ComboBox();
+            this.txtFONE2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtFONE1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCIDADE = new System.Windows.Forms.TextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtBAIRRO = new System.Windows.Forms.TextBox();
+            this.txtENDERECO = new System.Windows.Forms.TextBox();
+            this.txtDATA_NASC = new System.Windows.Forms.MaskedTextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,19 +52,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCOD_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtDATA_NASC = new System.Windows.Forms.MaskedTextBox();
-            this.txtENDERECO = new System.Windows.Forms.TextBox();
-            this.txtBAIRRO = new System.Windows.Forms.TextBox();
-            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
-            this.txtCIDADE = new System.Windows.Forms.TextBox();
-            this.txtFONE1 = new System.Windows.Forms.MaskedTextBox();
-            this.txtFONE2 = new System.Windows.Forms.MaskedTextBox();
-            this.txtCOD_CLIENTE = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbMASCULINO = new System.Windows.Forms.RadioButton();
+            this.rbFEMININO = new System.Windows.Forms.RadioButton();
+            this.ckRESTRICAO = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnGRAVAR = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -72,6 +84,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.ckRESTRICAO);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.cbESTADO);
             this.tabPage1.Controls.Add(this.txtFONE2);
             this.tabPage1.Controls.Add(this.txtFONE1);
             this.tabPage1.Controls.Add(this.txtCIDADE);
@@ -99,6 +115,99 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cbESTADO
+            // 
+            this.cbESTADO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbESTADO.FormattingEnabled = true;
+            this.cbESTADO.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MG",
+            "MS",
+            "MT",
+            "PA",
+            "PB",
+            "PE",
+            "PI",
+            "PR",
+            "RJ",
+            "RN",
+            "RO",
+            "RR",
+            "RS",
+            "SC",
+            "SE",
+            "SP",
+            "TO"});
+            this.cbESTADO.Location = new System.Drawing.Point(540, 195);
+            this.cbESTADO.Name = "cbESTADO";
+            this.cbESTADO.Size = new System.Drawing.Size(80, 21);
+            this.cbESTADO.TabIndex = 13;
+            // 
+            // txtFONE2
+            // 
+            this.txtFONE2.Location = new System.Drawing.Point(171, 254);
+            this.txtFONE2.Mask = "(00)00000-0000";
+            this.txtFONE2.Name = "txtFONE2";
+            this.txtFONE2.Size = new System.Drawing.Size(100, 20);
+            this.txtFONE2.TabIndex = 12;
+            // 
+            // txtFONE1
+            // 
+            this.txtFONE1.Location = new System.Drawing.Point(20, 254);
+            this.txtFONE1.Mask = "(00)00000-0000";
+            this.txtFONE1.Name = "txtFONE1";
+            this.txtFONE1.Size = new System.Drawing.Size(100, 20);
+            this.txtFONE1.TabIndex = 11;
+            // 
+            // txtCIDADE
+            // 
+            this.txtCIDADE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCIDADE.Location = new System.Drawing.Point(171, 195);
+            this.txtCIDADE.Name = "txtCIDADE";
+            this.txtCIDADE.Size = new System.Drawing.Size(311, 20);
+            this.txtCIDADE.TabIndex = 9;
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(20, 195);
+            this.txtCEP.Mask = "00,000-000";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(100, 20);
+            this.txtCEP.TabIndex = 8;
+            // 
+            // txtBAIRRO
+            // 
+            this.txtBAIRRO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtBAIRRO.Location = new System.Drawing.Point(370, 139);
+            this.txtBAIRRO.Name = "txtBAIRRO";
+            this.txtBAIRRO.Size = new System.Drawing.Size(250, 20);
+            this.txtBAIRRO.TabIndex = 7;
+            // 
+            // txtENDERECO
+            // 
+            this.txtENDERECO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtENDERECO.Location = new System.Drawing.Point(20, 139);
+            this.txtENDERECO.Name = "txtENDERECO";
+            this.txtENDERECO.Size = new System.Drawing.Size(300, 20);
+            this.txtENDERECO.TabIndex = 6;
+            // 
+            // txtDATA_NASC
+            // 
+            this.txtDATA_NASC.Location = new System.Drawing.Point(540, 83);
+            this.txtDATA_NASC.Mask = "00/00/0000";
+            this.txtDATA_NASC.Name = "txtDATA_NASC";
+            this.txtDATA_NASC.Size = new System.Drawing.Size(80, 20);
+            this.txtDATA_NASC.TabIndex = 5;
             // 
             // txtNome
             // 
@@ -231,6 +340,15 @@
             this.panel1.TabIndex = 1;
             this.panel1.TabStop = true;
             // 
+            // txtCOD_CLIENTE
+            // 
+            this.txtCOD_CLIENTE.Location = new System.Drawing.Point(16, 22);
+            this.txtCOD_CLIENTE.Mask = "00000";
+            this.txtCOD_CLIENTE.Name = "txtCOD_CLIENTE";
+            this.txtCOD_CLIENTE.PromptChar = ' ';
+            this.txtCOD_CLIENTE.Size = new System.Drawing.Size(100, 20);
+            this.txtCOD_CLIENTE.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -252,70 +370,103 @@
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtDATA_NASC
+            // groupBox1
             // 
-            this.txtDATA_NASC.Location = new System.Drawing.Point(540, 83);
-            this.txtDATA_NASC.Mask = "00/00/0000";
-            this.txtDATA_NASC.Name = "txtDATA_NASC";
-            this.txtDATA_NASC.Size = new System.Drawing.Size(80, 20);
-            this.txtDATA_NASC.TabIndex = 5;
+            this.groupBox1.Controls.Add(this.rbFEMININO);
+            this.groupBox1.Controls.Add(this.rbMASCULINO);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(319, 238);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(177, 43);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sexo";
             // 
-            // txtENDERECO
+            // rbMASCULINO
             // 
-            this.txtENDERECO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtENDERECO.Location = new System.Drawing.Point(20, 139);
-            this.txtENDERECO.Name = "txtENDERECO";
-            this.txtENDERECO.Size = new System.Drawing.Size(300, 20);
-            this.txtENDERECO.TabIndex = 6;
+            this.rbMASCULINO.AutoSize = true;
+            this.rbMASCULINO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMASCULINO.Location = new System.Drawing.Point(6, 20);
+            this.rbMASCULINO.Name = "rbMASCULINO";
+            this.rbMASCULINO.Size = new System.Drawing.Size(73, 17);
+            this.rbMASCULINO.TabIndex = 0;
+            this.rbMASCULINO.TabStop = true;
+            this.rbMASCULINO.Text = "Masculino";
+            this.rbMASCULINO.UseVisualStyleBackColor = true;
             // 
-            // txtBAIRRO
+            // rbFEMININO
             // 
-            this.txtBAIRRO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBAIRRO.Location = new System.Drawing.Point(370, 139);
-            this.txtBAIRRO.Name = "txtBAIRRO";
-            this.txtBAIRRO.Size = new System.Drawing.Size(250, 20);
-            this.txtBAIRRO.TabIndex = 7;
+            this.rbFEMININO.AutoSize = true;
+            this.rbFEMININO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFEMININO.Location = new System.Drawing.Point(96, 20);
+            this.rbFEMININO.Name = "rbFEMININO";
+            this.rbFEMININO.Size = new System.Drawing.Size(67, 17);
+            this.rbFEMININO.TabIndex = 1;
+            this.rbFEMININO.TabStop = true;
+            this.rbFEMININO.Text = "Feminino";
+            this.rbFEMININO.UseVisualStyleBackColor = true;
             // 
-            // txtCEP
+            // ckRESTRICAO
             // 
-            this.txtCEP.Location = new System.Drawing.Point(20, 195);
-            this.txtCEP.Mask = "00,000-000";
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(100, 20);
-            this.txtCEP.TabIndex = 8;
+            this.ckRESTRICAO.AutoSize = true;
+            this.ckRESTRICAO.Location = new System.Drawing.Point(549, 254);
+            this.ckRESTRICAO.Name = "ckRESTRICAO";
+            this.ckRESTRICAO.Size = new System.Drawing.Size(71, 17);
+            this.ckRESTRICAO.TabIndex = 14;
+            this.ckRESTRICAO.Text = "Restrição";
+            this.ckRESTRICAO.UseVisualStyleBackColor = true;
             // 
-            // txtCIDADE
+            // panel2
             // 
-            this.txtCIDADE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCIDADE.Location = new System.Drawing.Point(171, 195);
-            this.txtCIDADE.Name = "txtCIDADE";
-            this.txtCIDADE.Size = new System.Drawing.Size(311, 20);
-            this.txtCIDADE.TabIndex = 9;
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.btnFechar);
+            this.panel2.Controls.Add(this.btnExcluir);
+            this.panel2.Controls.Add(this.btnGRAVAR);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 292);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(6);
+            this.panel2.Size = new System.Drawing.Size(650, 41);
+            this.panel2.TabIndex = 15;
+            this.panel2.TabStop = true;
             // 
-            // txtFONE1
+            // btnGRAVAR
             // 
-            this.txtFONE1.Location = new System.Drawing.Point(20, 254);
-            this.txtFONE1.Mask = "(00)00000-0000";
-            this.txtFONE1.Name = "txtFONE1";
-            this.txtFONE1.Size = new System.Drawing.Size(100, 20);
-            this.txtFONE1.TabIndex = 11;
+            this.btnGRAVAR.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnGRAVAR.Image = ((System.Drawing.Image)(resources.GetObject("btnGRAVAR.Image")));
+            this.btnGRAVAR.Location = new System.Drawing.Point(6, 6);
+            this.btnGRAVAR.Name = "btnGRAVAR";
+            this.btnGRAVAR.Size = new System.Drawing.Size(75, 29);
+            this.btnGRAVAR.TabIndex = 0;
+            this.btnGRAVAR.Text = "&Gravar";
+            this.btnGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGRAVAR.UseVisualStyleBackColor = true;
             // 
-            // txtFONE2
+            // btnExcluir
             // 
-            this.txtFONE2.Location = new System.Drawing.Point(171, 254);
-            this.txtFONE2.Mask = "(00)00000-0000";
-            this.txtFONE2.Name = "txtFONE2";
-            this.txtFONE2.Size = new System.Drawing.Size(100, 20);
-            this.txtFONE2.TabIndex = 12;
+            this.btnExcluir.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(81, 6);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 29);
+            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.Text = "&Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // txtCOD_CLIENTE
+            // btnFechar
             // 
-            this.txtCOD_CLIENTE.Location = new System.Drawing.Point(16, 22);
-            this.txtCOD_CLIENTE.Mask = "00000";
-            this.txtCOD_CLIENTE.Name = "txtCOD_CLIENTE";
-            this.txtCOD_CLIENTE.PromptChar = ' ';
-            this.txtCOD_CLIENTE.Size = new System.Drawing.Size(100, 20);
-            this.txtCOD_CLIENTE.TabIndex = 2;
+            this.btnFechar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(569, 6);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 29);
+            this.btnFechar.TabIndex = 2;
+            this.btnFechar.Text = "&Fechar";
+            this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // Cadastro_de_Clientes
             // 
@@ -333,6 +484,9 @@
             this.tabPage1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -364,5 +518,14 @@
         private System.Windows.Forms.TextBox txtENDERECO;
         private System.Windows.Forms.MaskedTextBox txtDATA_NASC;
         private System.Windows.Forms.MaskedTextBox txtCOD_CLIENTE;
+        private System.Windows.Forms.ComboBox cbESTADO;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnGRAVAR;
+        private System.Windows.Forms.CheckBox ckRESTRICAO;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbFEMININO;
+        private System.Windows.Forms.RadioButton rbMASCULINO;
     }
 }

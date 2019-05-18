@@ -9,3 +9,12 @@ C:\Users\admin\Documents\Adryan\BLL\obj\Debug\BLL.dll
 C:\Users\admin\Documents\Adryan\BLL\obj\Debug\BLL.pdb
 C:\Users\admin\Documents\Adryan\BLL\bin\Debug\BLL.dll.CodeAnalysisLog.xml
 C:\Users\admin\Documents\Adryan\BLL\bin\Debug\BLL.dll.lastcodeanalysissucceeded
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\BLL.dll
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\BLL.pdb
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\DAL.dll
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\Models.dll
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\DAL.pdb
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\Models.pdb
+C:\Users\admin\Documents\Adryan\siscar\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Adryan\siscar\BLL\obj\Debug\BLL.dll
+C:\Users\admin\Documents\Adryan\siscar\BLL\obj\Debug\BLL.pdb
