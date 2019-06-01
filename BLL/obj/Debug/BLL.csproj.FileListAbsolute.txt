@@ -18,3 +18,5 @@ C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\Models.pdb
 C:\Users\admin\Documents\Adryan\siscar\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Adryan\siscar\BLL\obj\Debug\BLL.dll
 C:\Users\admin\Documents\Adryan\siscar\BLL\obj\Debug\BLL.pdb
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\Npgsql.dll
+C:\Users\admin\Documents\Adryan\siscar\BLL\bin\Debug\Mono.Security.dll

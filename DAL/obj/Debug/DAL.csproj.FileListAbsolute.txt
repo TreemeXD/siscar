@@ -14,3 +14,5 @@ C:\Users\admin\Documents\Adryan\siscar\DAL\bin\Debug\Models.pdb
 C:\Users\admin\Documents\Adryan\siscar\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Adryan\siscar\DAL\obj\Debug\DAL.dll
 C:\Users\admin\Documents\Adryan\siscar\DAL\obj\Debug\DAL.pdb
+C:\Users\admin\Documents\Adryan\siscar\DAL\bin\Debug\Mono.Security.dll
+C:\Users\admin\Documents\Adryan\siscar\DAL\bin\Debug\Npgsql.dll
