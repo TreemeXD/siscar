@@ -26,7 +26,7 @@ namespace UI
             {
                 Usuario usuario = new Usuario();
                 usuario.Login = txtUsuario.Text;
-                usuario.Senha = txtSenha.Text;
+                usuario.Senha = Int16.Parse(txtSenha.Text) ;
                
                 LoginBLL usuarioBll = new LoginBLL();
 
@@ -54,6 +54,11 @@ namespace UI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

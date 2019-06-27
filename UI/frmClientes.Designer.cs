@@ -31,6 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_de_Clientes));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnGRAVAR = new System.Windows.Forms.Button();
+            this.ckRESTRICAO = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbFEMININO = new System.Windows.Forms.RadioButton();
+            this.rbMASCULINO = new System.Windows.Forms.RadioButton();
             this.cbESTADO = new System.Windows.Forms.ComboBox();
             this.txtFONE2 = new System.Windows.Forms.MaskedTextBox();
             this.txtFONE1 = new System.Windows.Forms.MaskedTextBox();
@@ -55,19 +63,11 @@
             this.txtCOD_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbMASCULINO = new System.Windows.Forms.RadioButton();
-            this.rbFEMININO = new System.Windows.Forms.RadioButton();
-            this.ckRESTRICAO = new System.Windows.Forms.CheckBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnGRAVAR = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -115,6 +115,104 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.btnFechar);
+            this.panel2.Controls.Add(this.btnExcluir);
+            this.panel2.Controls.Add(this.btnGRAVAR);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 292);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(6);
+            this.panel2.Size = new System.Drawing.Size(650, 41);
+            this.panel2.TabIndex = 15;
+            this.panel2.TabStop = true;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(569, 6);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 29);
+            this.btnFechar.TabIndex = 2;
+            this.btnFechar.Text = "&Fechar";
+            this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(81, 6);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 29);
+            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.Text = "&Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnGRAVAR
+            // 
+            this.btnGRAVAR.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnGRAVAR.Image = ((System.Drawing.Image)(resources.GetObject("btnGRAVAR.Image")));
+            this.btnGRAVAR.Location = new System.Drawing.Point(6, 6);
+            this.btnGRAVAR.Name = "btnGRAVAR";
+            this.btnGRAVAR.Size = new System.Drawing.Size(75, 29);
+            this.btnGRAVAR.TabIndex = 0;
+            this.btnGRAVAR.Text = "&Gravar";
+            this.btnGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGRAVAR.UseVisualStyleBackColor = true;
+            // 
+            // ckRESTRICAO
+            // 
+            this.ckRESTRICAO.AutoSize = true;
+            this.ckRESTRICAO.Location = new System.Drawing.Point(549, 254);
+            this.ckRESTRICAO.Name = "ckRESTRICAO";
+            this.ckRESTRICAO.Size = new System.Drawing.Size(71, 17);
+            this.ckRESTRICAO.TabIndex = 14;
+            this.ckRESTRICAO.Text = "Restrição";
+            this.ckRESTRICAO.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbFEMININO);
+            this.groupBox1.Controls.Add(this.rbMASCULINO);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(319, 238);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(177, 43);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sexo";
+            // 
+            // rbFEMININO
+            // 
+            this.rbFEMININO.AutoSize = true;
+            this.rbFEMININO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFEMININO.Location = new System.Drawing.Point(96, 20);
+            this.rbFEMININO.Name = "rbFEMININO";
+            this.rbFEMININO.Size = new System.Drawing.Size(67, 17);
+            this.rbFEMININO.TabIndex = 1;
+            this.rbFEMININO.TabStop = true;
+            this.rbFEMININO.Text = "Feminino";
+            this.rbFEMININO.UseVisualStyleBackColor = true;
+            // 
+            // rbMASCULINO
+            // 
+            this.rbMASCULINO.AutoSize = true;
+            this.rbMASCULINO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMASCULINO.Location = new System.Drawing.Point(6, 20);
+            this.rbMASCULINO.Name = "rbMASCULINO";
+            this.rbMASCULINO.Size = new System.Drawing.Size(73, 17);
+            this.rbMASCULINO.TabIndex = 0;
+            this.rbMASCULINO.TabStop = true;
+            this.rbMASCULINO.Text = "Masculino";
+            this.rbMASCULINO.UseVisualStyleBackColor = true;
             // 
             // cbESTADO
             // 
@@ -173,6 +271,7 @@
             // 
             this.txtCIDADE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCIDADE.Location = new System.Drawing.Point(171, 195);
+            this.txtCIDADE.MaxLength = 50;
             this.txtCIDADE.Name = "txtCIDADE";
             this.txtCIDADE.Size = new System.Drawing.Size(311, 20);
             this.txtCIDADE.TabIndex = 9;
@@ -189,6 +288,7 @@
             // 
             this.txtBAIRRO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBAIRRO.Location = new System.Drawing.Point(370, 139);
+            this.txtBAIRRO.MaxLength = 50;
             this.txtBAIRRO.Name = "txtBAIRRO";
             this.txtBAIRRO.Size = new System.Drawing.Size(250, 20);
             this.txtBAIRRO.TabIndex = 7;
@@ -197,6 +297,7 @@
             // 
             this.txtENDERECO.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtENDERECO.Location = new System.Drawing.Point(20, 139);
+            this.txtENDERECO.MaxLength = 80;
             this.txtENDERECO.Name = "txtENDERECO";
             this.txtENDERECO.Size = new System.Drawing.Size(300, 20);
             this.txtENDERECO.TabIndex = 6;
@@ -213,6 +314,7 @@
             // 
             this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Location = new System.Drawing.Point(20, 83);
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(300, 20);
             this.txtNome.TabIndex = 3;
@@ -325,6 +427,7 @@
             this.txtCPF.PromptChar = ' ';
             this.txtCPF.Size = new System.Drawing.Size(112, 20);
             this.txtCPF.TabIndex = 2;
+            this.txtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCPF.ValidatingType = typeof(int);
             // 
             // panel1
@@ -370,104 +473,6 @@
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbFEMININO);
-            this.groupBox1.Controls.Add(this.rbMASCULINO);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(319, 238);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(177, 43);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sexo";
-            // 
-            // rbMASCULINO
-            // 
-            this.rbMASCULINO.AutoSize = true;
-            this.rbMASCULINO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMASCULINO.Location = new System.Drawing.Point(6, 20);
-            this.rbMASCULINO.Name = "rbMASCULINO";
-            this.rbMASCULINO.Size = new System.Drawing.Size(73, 17);
-            this.rbMASCULINO.TabIndex = 0;
-            this.rbMASCULINO.TabStop = true;
-            this.rbMASCULINO.Text = "Masculino";
-            this.rbMASCULINO.UseVisualStyleBackColor = true;
-            // 
-            // rbFEMININO
-            // 
-            this.rbFEMININO.AutoSize = true;
-            this.rbFEMININO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFEMININO.Location = new System.Drawing.Point(96, 20);
-            this.rbFEMININO.Name = "rbFEMININO";
-            this.rbFEMININO.Size = new System.Drawing.Size(67, 17);
-            this.rbFEMININO.TabIndex = 1;
-            this.rbFEMININO.TabStop = true;
-            this.rbFEMININO.Text = "Feminino";
-            this.rbFEMININO.UseVisualStyleBackColor = true;
-            // 
-            // ckRESTRICAO
-            // 
-            this.ckRESTRICAO.AutoSize = true;
-            this.ckRESTRICAO.Location = new System.Drawing.Point(549, 254);
-            this.ckRESTRICAO.Name = "ckRESTRICAO";
-            this.ckRESTRICAO.Size = new System.Drawing.Size(71, 17);
-            this.ckRESTRICAO.TabIndex = 14;
-            this.ckRESTRICAO.Text = "Restrição";
-            this.ckRESTRICAO.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.btnFechar);
-            this.panel2.Controls.Add(this.btnExcluir);
-            this.panel2.Controls.Add(this.btnGRAVAR);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 292);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(6);
-            this.panel2.Size = new System.Drawing.Size(650, 41);
-            this.panel2.TabIndex = 15;
-            this.panel2.TabStop = true;
-            // 
-            // btnGRAVAR
-            // 
-            this.btnGRAVAR.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnGRAVAR.Image = ((System.Drawing.Image)(resources.GetObject("btnGRAVAR.Image")));
-            this.btnGRAVAR.Location = new System.Drawing.Point(6, 6);
-            this.btnGRAVAR.Name = "btnGRAVAR";
-            this.btnGRAVAR.Size = new System.Drawing.Size(75, 29);
-            this.btnGRAVAR.TabIndex = 0;
-            this.btnGRAVAR.Text = "&Gravar";
-            this.btnGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGRAVAR.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(81, 6);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 29);
-            this.btnExcluir.TabIndex = 1;
-            this.btnExcluir.Text = "&Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(569, 6);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(75, 29);
-            this.btnFechar.TabIndex = 2;
-            this.btnFechar.Text = "&Fechar";
-            this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
             // Cadastro_de_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,14 +484,15 @@
             this.Name = "Cadastro_de_Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Cadastro_de_Clientes_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

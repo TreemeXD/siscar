@@ -82,11 +82,12 @@
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(225, 189);
-            this.txtSenha.MaxLength = 8;
+            this.txtSenha.MaxLength = 10;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(278, 20);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // btnOK
             // 

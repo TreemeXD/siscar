@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteDAL.cs" />
     <Compile Include="ConnectionFactory.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="PerfilDAL.cs" />

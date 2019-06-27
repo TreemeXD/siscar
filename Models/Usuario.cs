@@ -9,7 +9,7 @@ namespace Models
    public class Usuario
     {
        private string login;
-       private string senha;
+       private int senha;
 
        public string Login
        {
@@ -17,7 +17,7 @@ namespace Models
            set { login = value; }
        }
 
-       public string Senha
+       public int Senha
        {
            get { return senha; }
            set { senha = value; }

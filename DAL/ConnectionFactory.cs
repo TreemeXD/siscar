@@ -14,7 +14,7 @@ namespace DAL
         public static NpgsqlConnection Connect()
         {
             NpgsqlConnection conn = new NpgsqlConnection
-            ("Server=localhost; Port=5433;Userid=Postgres;password=12345;Database=CSHARP;");
+            ("Server=localhost; Port=5433;Userid=postgres;password=12345;Database=CSHARP;");
             conn.Open();
             return conn;
 

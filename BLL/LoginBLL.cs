@@ -16,7 +16,7 @@ namespace BLL
             {
                 throw new Exception("Por favor, informe seu usuário!");
             }
-            if (usuario.Senha.Trim().Length == 0)
+            if (usuario.Senha == null)
             {
                 throw new Exception("Por favor, informe sua senha!");
             }

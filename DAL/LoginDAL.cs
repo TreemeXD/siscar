@@ -15,9 +15,9 @@ namespace DAL
         {
             string validaUsuario = (string.Format(
                 "SELECT NOME " +
-                "FROM USUARIOS " +
-                "WHERE LOGIN = ' {0} ' " +
-                "AND SENAH = ' {1} ' " +
+                "FROM usuarios " +
+                "WHERE LOGIN = '{0}' " +
+                "AND SENHA = '{1}' " +
                 "AND SN_ATIVO = 'S'",
                 usuario.Login,
                 usuario.Senha));
