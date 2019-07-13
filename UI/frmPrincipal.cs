@@ -46,13 +46,13 @@ namespace UI
 
             toolStripStatusLabel1.Text = "Bem-Vindo " + usuario + "!";
 
-            if (perfilbll.VerificaCoreFundo(perfil).Equals("C"))
+           /* if (perfilbll.VerificaCoreFundo(perfil).Equals("C"))
 
                 this.BackColor = ColorTranslator.FromHtml(perfilbll.RetornaCoreFundo(perfil));
 
             else if (perfilbll.VerificaCoreFundo(perfil).Equals("I"))
 
-                this.BackgroundImage = Image.FromFile(perfilbll.RetornaCoreFundo(perfil));
+                this.BackgroundImage = Image.FromFile(perfilbll.RetornaCoreFundo(perfil)); */ 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
