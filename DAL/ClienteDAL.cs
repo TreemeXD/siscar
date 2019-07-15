@@ -119,5 +119,61 @@ namespace DAL
            }
 
        }
+
+       public void ExcluirCliente(Cliente cliente)
+       {
+           try
+           {
+               int Codigo = Convert.ToInt32(cliente.Cod_Cliente);
+
+               string excluiC = (string.Format(
+                   "DELETE FROM CLIENTES " +
+                   "WHERE COD_CLIENTE = '{0}'",
+                   Codigo));
+
+               NpgsqlCommand comandoDelete = new NpgsqlCommand
+               (excluiC, ConnectionFactory.Connect());
+               comandoDelete.ExecuteNonQuery();
+           }
+           catch (Exception ex)
+           {
+               throw new Exception("Falha na excluir cliente!" + ex.Message);
+           }
+           finally
+           {
+               ConnectionFactory.Connect().Close();
+           }
+       }
+       public void InserirCodigo(Cliente cliente)
+       {
+           try
+           {
+               string insereCo = (string.Format(
+                   "SELECT MAX(COD_CLIENTE) " +
+                   "FROM CLIENTES "));
+
+               NpgsqlDataAdapter da = new NpgsqlDataAdapter
+               (new NpgsqlCommand(insereCo, ConnectionFactory.Connect()));
+               DataTable dt = new DataTable();
+               da.Fill(dt);
+
+               cliente.Cod_Cliente = dt.Rows[0]["max"].ToString();
+
+               if (cliente.Cod_Cliente == "")
+                   cliente.Cod_Cliente = "0";
+
+               int Codigo = Convert.ToInt32(cliente.Cod_Cliente);
+               Codigo = Codigo + 1;
+               cliente.Cod_Cliente = Codigo.ToString();
+           }
+           catch (Exception ex)
+           {
+               throw new Exception("Falha ao incluir banco na base de dados!" + ex.Message);
+           }
+           finally
+           {
+               ConnectionFactory.Connect().Close();
+           }
+       }
     }
 }

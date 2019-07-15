@@ -31,5 +31,26 @@ namespace BLL
            }
            return true;
        }
+
+                 public void inserirCodigo(Cliente cliente)
+                 {
+                     ClienteDAL clientedal = new ClienteDAL();
+                     clientedal.InserirCodigo(cliente);
+                 }
+                 public void inserirCliente(Cliente cliente)
+                 {
+                     ClienteDAL clientedal = new ClienteDAL();
+                     clientedal.InserirCliente(cliente);
+                 }
+                 public void atualizarCliente(Cliente cliente)
+                 {
+                     ClienteDAL clientedal = new ClienteDAL();
+                     clientedal.AtualizarCliente(cliente);
+                 }
+                 public void excluirCliente(Cliente cliente)
+                 {
+                     ClienteDAL clientedal = new ClienteDAL();
+                     clientedal.ExcluirCliente(cliente);
+                 }
     }
 }

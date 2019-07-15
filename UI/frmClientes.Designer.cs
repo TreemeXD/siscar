@@ -166,6 +166,7 @@
             this.btnGRAVAR.Text = "&Gravar";
             this.btnGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGRAVAR.UseVisualStyleBackColor = true;
+            this.btnGRAVAR.Click += new System.EventHandler(this.btnGRAVAR_Click);
             // 
             // ckRESTRICAO
             // 
@@ -479,6 +480,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 362);
             this.Controls.Add(this.tabControl1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Cadastro_de_Clientes";

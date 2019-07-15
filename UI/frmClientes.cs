@@ -18,6 +18,14 @@ namespace UI
         public Cadastro_de_Clientes()
         {
             InitializeComponent();
+
+            ClienteBLL clientebll = new ClienteBLL();
+            Cliente cliente = new Cliente();
+
+            clientebll.inserirCodigo(cliente);
+            txtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+            btnExcluir.Enabled = false;
+            txtCOD_CLIENTE.Enabled = false;
         }
       private void ZeraCampos()
         {
@@ -50,6 +58,49 @@ namespace UI
                 ZeraCampos();
             if (e.KeyCode == Keys.Enter)
                 SendKeys.Send("{TAB}");
+        }
+
+        private void btnGRAVAR_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            ClienteBLL clientebll = new ClienteBLL();
+
+            try
+            {
+                cliente.Cod_Cliente = txtCOD_CLIENTE.Text;
+                cliente.Nome = txtNome.Text;
+                cliente.CPF = txtCPF.Text;
+                cliente.Data_Nasc = txtDATA_NASC.Text;
+                cliente.Endereco = txtENDERECO.Text;
+                cliente.Bairro = txtBAIRRO.Text;
+                cliente.CEP = txtCEP.Text;
+                cliente.Cidade = txtCIDADE.Text;
+                cliente.Fone1 = txtFONE1.Text;
+                cliente.Fone2 = txtFONE2.Text;
+                cliente.Estado = cbESTADO.Text;
+
+                if (rbMASCULINO.Checked)
+                    cliente.Sexo = "M";
+                else
+                    cliente.Sexo = "F";
+                if (ckRESTRICAO.Checked)
+                    cliente.Restricao = "S";
+                else
+                    cliente.Restricao = "N";
+
+                clientebll.VerificaCampos(cliente);
+                clientebll.inserirCliente(cliente);
+
+                MessageBox.Show("O usuário " + cliente.Nome + " foi cadastrado!", "Cadastro efetuado com sucesso!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                ZeraCampos();
+                clientebll.inserirCodigo(cliente);
+                txtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
