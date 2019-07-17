@@ -175,5 +175,20 @@ namespace DAL
                ConnectionFactory.Connect().Close();
            }
        }
+       public DataTable ConsultarCliente(string NomeCliente)
+       {
+           string consultaC = (string.Format(
+               "SELECT *             " +
+               "FROM CLIENTES        " +
+               "WHERE NOME LIKE '%{0}%' ",
+               NomeCliente));
+
+           NpgsqlDataAdapter da = new NpgsqlDataAdapter
+           (new NpgsqlCommand(consultaC, ConnectionFactory.Connect()));
+           DataTable dt = new DataTable();
+           da.Fill(dt);
+
+           return dt;
+       }
     }
 }

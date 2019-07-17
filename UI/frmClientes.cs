@@ -47,6 +47,26 @@ namespace UI
 
         }
 
+      private void PreencherDataGrid(string NomeCliente)
+      {
+          ClienteBLL clientebll = new ClienteBLL();
+          dataGridView1.DataSource = clientebll.consultarCliente(NomeCliente);
+
+          dataGridView1.Columns[0].HeaderText = "Código";
+          dataGridView1.Columns[1].HeaderText = "Nome";
+          dataGridView1.Columns[2].HeaderText = "CPF";
+          dataGridView1.Columns[3].HeaderText = "Data_Nasc";
+          dataGridView1.Columns[4].HeaderText = "Endereço";
+          dataGridView1.Columns[5].HeaderText = "Bairro";
+          dataGridView1.Columns[6].HeaderText = "CEP";
+          dataGridView1.Columns[7].HeaderText = "Cidade";
+          dataGridView1.Columns[8].HeaderText = "Estado";
+          dataGridView1.Columns[9].HeaderText = "Fone1";
+          dataGridView1.Columns[10].HeaderText = "Fone2";
+          dataGridView1.Columns[11].HeaderText = "Sexo";
+          dataGridView1.Columns[12].HeaderText = "Restrição";
+      }
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -101,6 +121,18 @@ namespace UI
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void tabPage2_Enter(object sender, EventArgs e)
+        {
+            PreencherDataGrid(null);
+        }
+
+        private void tabControl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+
+                PreencherDataGrid(txtCONSULTA.Text);
         }
     }
 }

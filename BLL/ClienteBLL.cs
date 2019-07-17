@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -52,5 +53,11 @@ namespace BLL
                      ClienteDAL clientedal = new ClienteDAL();
                      clientedal.ExcluirCliente(cliente);
                  }
+
+         public DataTable consultarCliente(string NomeCliente)
+             {
+                 ClienteDAL clientedal = new ClienteDAL();
+                 return clientedal.ConsultarCliente(NomeCliente);
+             }
     }
 }
