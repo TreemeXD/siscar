@@ -63,18 +63,18 @@
             this.txtCOD_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCONSULTA = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCONSULTA = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -162,6 +162,7 @@
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnGRAVAR
             // 
@@ -485,33 +486,6 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtCONSULTA);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(650, 45);
-            this.panel3.TabIndex = 0;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(133, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Digite nome para consulta:";
-            // 
-            // txtCONSULTA
-            // 
-            this.txtCONSULTA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCONSULTA.Location = new System.Drawing.Point(144, 12);
-            this.txtCONSULTA.Name = "txtCONSULTA";
-            this.txtCONSULTA.Size = new System.Drawing.Size(500, 20);
-            this.txtCONSULTA.TabIndex = 1;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -526,6 +500,34 @@
             this.dataGridView1.Size = new System.Drawing.Size(650, 285);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.TabStop = false;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtCONSULTA);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(650, 45);
+            this.panel3.TabIndex = 0;
+            // 
+            // txtCONSULTA
+            // 
+            this.txtCONSULTA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCONSULTA.Location = new System.Drawing.Point(144, 12);
+            this.txtCONSULTA.Name = "txtCONSULTA";
+            this.txtCONSULTA.Size = new System.Drawing.Size(500, 20);
+            this.txtCONSULTA.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Digite nome para consulta:";
             // 
             // Cadastro_de_Clientes
             // 
@@ -549,9 +551,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

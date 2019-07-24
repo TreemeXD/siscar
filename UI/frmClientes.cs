@@ -15,6 +15,8 @@ namespace UI
 {
     public partial class Cadastro_de_Clientes : Form
     {
+        private string consulta = null;
+
         public Cadastro_de_Clientes()
         {
             InitializeComponent();
@@ -29,6 +31,12 @@ namespace UI
         }
       private void ZeraCampos()
         {
+            ClienteBLL clientebll = new ClienteBLL();
+            Cliente cliente = new Cliente();
+
+            clientebll.inserirCodigo(cliente);
+            txtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+
           //Limpa todos os campos
             txtNome.Clear();
             txtCPF.Clear();
@@ -44,6 +52,8 @@ namespace UI
             rbFEMININO.Checked = false;
             txtCOD_CLIENTE.Enabled = false;
             txtNome.Focus();
+            btnExcluir.Enabled = false;
+            consulta = null;
 
         }
 
@@ -109,13 +119,25 @@ namespace UI
                     cliente.Restricao = "N";
 
                 clientebll.VerificaCampos(cliente);
-                clientebll.inserirCliente(cliente);
 
-                MessageBox.Show("O usuário " + cliente.Nome + " foi cadastrado!", "Cadastro efetuado com sucesso!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                ZeraCampos();
-                clientebll.inserirCodigo(cliente);
-                txtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+                if (consulta == null)
+                {
+                    clientebll.inserirCliente(cliente);
+                    MessageBox.Show("O usuário " + cliente.Nome + " foi Cadastrado!", "Cadastro efetuado com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ZeraCampos();
+                    clientebll.inserirCodigo(cliente);
+                    txtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+                }
+
+                else
+                {
+                    clientebll.atualizarCliente(cliente);
+                    MessageBox.Show("A atualização do usuário: " + cliente.Nome + " foi feita com sucesso!", "Atualização efetuada com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ZeraCampos();
+                    clientebll.inserirCodigo(cliente);
+                    txtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+                    consulta = null;
+                }
             }
             catch (Exception ex)
             {
@@ -133,6 +155,67 @@ namespace UI
             if (e.KeyCode == Keys.Enter)
 
                 PreencherDataGrid(txtCONSULTA.Text);
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente cliente = new Cliente();
+
+                tabControl1.SelectTab(0);
+                consulta = "S";
+                txtNome.Focus();
+                btnExcluir.Enabled = true;
+                txtCONSULTA.Text = "";
+
+                txtCOD_CLIENTE.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtCPF.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtDATA_NASC.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtENDERECO.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                txtBAIRRO.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtCEP.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                txtCIDADE.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                cbESTADO.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                txtFONE1.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                txtFONE2.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+                cliente.Sexo = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+                cliente.Restricao = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+
+                if (cliente.Sexo == "M")
+                    rbMASCULINO.Checked = true;
+                else
+                    rbFEMININO.Checked = true;
+                if (cliente.Restricao == "S")
+                    ckRESTRICAO.Checked = true;
+                else
+                    ckRESTRICAO.Checked = false;
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("A pesquisa selecionada, não contém Dados!", "Consulta Vazia", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            ClienteBLL clientebll = new ClienteBLL();
+
+            cliente.Cod_Cliente = txtCOD_CLIENTE.Text;
+            cliente.Nome = txtNome.Text;
+
+            if (MessageBox.Show("Deseja excluir o usuário " + cliente.Nome + "?", "Excluir Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                clientebll.excluirCliente(cliente);
+                ZeraCampos();
+                clientebll.inserirCodigo(cliente);
+                txtCOD_CLIENTE.Text = cliente.Cod_Cliente;
+                consulta = null;
+                btnExcluir.Enabled = false;
+            }
         }
     }
 }
