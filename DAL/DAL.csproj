@@ -48,6 +48,8 @@
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="ConnectionFactory.cs" />
     <Compile Include="LoginDAL.cs" />
+    <Compile Include="MarcaDAL.cs" />
+    <Compile Include="ModeloDAL.cs" />
     <Compile Include="PerfilDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

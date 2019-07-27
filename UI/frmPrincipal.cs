@@ -135,5 +135,17 @@ namespace UI
             Cadastro_de_Clientes frmClientes1 = new Cadastro_de_Clientes();
             frmClientes1.ShowDialog();
         }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarcas frmMarcas1 = new frmMarcas();
+            frmMarcas1.ShowDialog();
+        }
+
+        private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModelos frmModelos1 = new frmModelos();
+            frmModelos1.ShowDialog();
+        }
     }
 }
