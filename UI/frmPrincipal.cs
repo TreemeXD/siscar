@@ -147,5 +147,11 @@ namespace UI
             frmModelos frmModelos1 = new frmModelos();
             frmModelos1.ShowDialog();
         }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios frmUsuarios1 = new frmUsuarios();
+            frmUsuarios1.ShowDialog();
+        }
     }
 }

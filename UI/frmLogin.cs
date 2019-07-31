@@ -26,7 +26,7 @@ namespace UI
             {
                 Usuario usuario = new Usuario();
                 usuario.Login = txtUsuario.Text;
-                usuario.Senha = Int16.Parse(txtSenha.Text) ;
+                usuario.Senha = txtSenha.Text;
                
                 LoginBLL usuarioBll = new LoginBLL();
 

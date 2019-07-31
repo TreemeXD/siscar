@@ -6,21 +6,35 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-   public class Usuario
+    public class Usuario
     {
-       private string login;
-       private int senha;
+        private String login;
+        private String nome;
+        private String senha;
+        private String ativo;
 
-       public string Login
-       {
-           get { return login; }
-           set { login = value; }
-       }
+        public String Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
 
-       public int Senha
-       {
-           get { return senha; }
-           set { senha = value; }
-       }
+        public String Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public String Senha
+        {
+            get { return senha; }
+            set { senha = value; }
+        }
+
+        public String Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
     }
 }

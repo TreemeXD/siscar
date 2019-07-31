@@ -112,7 +112,7 @@
             this.txtSENHA.Location = new System.Drawing.Point(20, 142);
             this.txtSENHA.MaxLength = 10;
             this.txtSENHA.Name = "txtSENHA";
-            this.txtSENHA.PasswordChar = '#';
+            this.txtSENHA.PasswordChar = '*';
             this.txtSENHA.Size = new System.Drawing.Size(168, 20);
             this.txtSENHA.TabIndex = 4;
             // 
@@ -138,6 +138,7 @@
             // 
             // txtNOME
             // 
+            this.txtNOME.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNOME.Location = new System.Drawing.Point(20, 83);
             this.txtNOME.MaxLength = 50;
             this.txtNOME.Name = "txtNOME";
@@ -179,10 +180,12 @@
             this.btFECHAR.Text = "&Fechar";
             this.btFECHAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btFECHAR.UseVisualStyleBackColor = true;
+            this.btFECHAR.Click += new System.EventHandler(this.btFECHAR_Click);
             // 
             // btEXCLUIR
             // 
             this.btEXCLUIR.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btEXCLUIR.Enabled = false;
             this.btEXCLUIR.Image = ((System.Drawing.Image)(resources.GetObject("btEXCLUIR.Image")));
             this.btEXCLUIR.Location = new System.Drawing.Point(81, 6);
             this.btEXCLUIR.Name = "btEXCLUIR";
@@ -191,6 +194,7 @@
             this.btEXCLUIR.Text = "&Excluir";
             this.btEXCLUIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btEXCLUIR.UseVisualStyleBackColor = true;
+            this.btEXCLUIR.Click += new System.EventHandler(this.btEXCLUIR_Click);
             // 
             // btGRAVAR
             // 
@@ -203,6 +207,7 @@
             this.btGRAVAR.Text = "&Gravar";
             this.btGRAVAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btGRAVAR.UseVisualStyleBackColor = true;
+            this.btGRAVAR.Click += new System.EventHandler(this.btGRAVAR_Click);
             // 
             // panel1
             // 
@@ -236,6 +241,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // dataGridView1
             // 
@@ -251,6 +257,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(428, 245);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.TabStop = false;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // panel3
             // 
@@ -269,6 +276,7 @@
             this.txtCONSULTA.Name = "txtCONSULTA";
             this.txtCONSULTA.Size = new System.Drawing.Size(239, 20);
             this.txtCONSULTA.TabIndex = 1;
+            this.txtCONSULTA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCONSULTA_KeyDown);
             // 
             // frmUsuarios
             // 
@@ -282,6 +290,7 @@
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuários";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUsuarios_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
