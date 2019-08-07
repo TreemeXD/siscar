@@ -60,7 +60,7 @@
     <Compile Include="frmGraficos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGraficos.Designer.cs">
+    <Compile Include="frmGraficos.designer.cs">
       <DependentUpon>frmGraficos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">

@@ -185,6 +185,7 @@
             this.graficosToolStripMenuItem.Name = "graficosToolStripMenuItem";
             this.graficosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.graficosToolStripMenuItem.Text = "&Gráficos";
+            this.graficosToolStripMenuItem.Click += new System.EventHandler(this.graficosToolStripMenuItem_Click);
             // 
             // utilitáriosToolStripMenuItem
             // 
@@ -365,6 +366,7 @@
             this.toolStripButton4.Text = "Gráficos";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.ToolTipText = "Gráficos das negociações";
+            this.toolStripButton4.Click += new System.EventHandler(this.graficosToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 

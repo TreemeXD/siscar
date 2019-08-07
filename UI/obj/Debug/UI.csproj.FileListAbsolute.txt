@@ -40,3 +40,4 @@ C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmUsuarios.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmClientes.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmMovimentacao.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmEstoque.resources
+C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmGraficos.resources
