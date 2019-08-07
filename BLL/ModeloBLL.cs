@@ -48,6 +48,12 @@ namespace BLL
         {
             ModeloDAL modelodal = new ModeloDAL();
             return modelodal.ConsultarModelo(NomeModelo);
-        }        
+        }
+
+        public DataTable retornaModelo(String NomeMarca)
+        {
+            ModeloDAL modelodal = new ModeloDAL();
+            return modelodal.RetornaModelo(NomeMarca);
+        }
     }
 }

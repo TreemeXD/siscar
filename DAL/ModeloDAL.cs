@@ -117,5 +117,24 @@ namespace DAL
 
             return dt;
         }
+
+        public DataTable RetornaModelo(String NomeMarca)
+        {
+            String retornaM = (String.Format(
+                "SELECT A.COD_MODELO, " +
+                "B.DS_MARCA, " +
+                "A.DS_MODELO " +
+                "FROM MODELOS A, " +
+                "MARCAS  B " +
+                "WHERE A.COD_MARCA = B.COD_MARCA " +
+                "AND B.DS_MARCA = '{0}' ", NomeMarca));
+
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter
+                   (new NpgsqlCommand(retornaM, ConnectionFactory.Connect()));
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

@@ -43,6 +43,7 @@
     <Compile Include="Login.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Modelo.cs" />
+    <Compile Include="Movimentacao.cs" />
     <Compile Include="Perfil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />

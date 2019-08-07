@@ -61,11 +61,6 @@ namespace UI
             toolStripStatusLabel3.Text = "Hora: " + DateTime.Now.ToShortTimeString();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("calc.exe");
@@ -132,7 +127,7 @@ namespace UI
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cadastro_de_Clientes frmClientes1 = new Cadastro_de_Clientes();
+            frmClientes frmClientes1 = new frmClientes();
             frmClientes1.ShowDialog();
         }
 
@@ -152,6 +147,26 @@ namespace UI
         {
             frmUsuarios frmUsuarios1 = new frmUsuarios();
             frmUsuarios1.ShowDialog();
+        }
+
+        private void entradaCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMovimentacao frmMovimentacao1 = new frmMovimentacao();
+            frmMovimentacao1.Entrada_Saida = "E";
+            frmMovimentacao1.ShowDialog();
+        }
+
+        private void saídaVendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMovimentacao frmMovimentacao1 = new frmMovimentacao();
+            frmMovimentacao1.Entrada_Saida = "S";
+            frmMovimentacao1.ShowDialog();
+        }
+
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstoque frmEstoque1 = new frmEstoque();
+            frmEstoque1.ShowDialog();
         }
     }
 }

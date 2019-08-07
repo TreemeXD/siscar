@@ -31,10 +31,12 @@ C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmPrincipal.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmSplash.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.Properties.Resources.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.csproj.GenerateResource.Cache
-C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.Cadastro_de_Clientes.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Adryan\siscar\UI\bin\Debug\Npgsql.dll
 C:\Users\admin\Documents\Adryan\siscar\UI\bin\Debug\Mono.Security.dll
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmMarcas.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmModelos.resources
 C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmUsuarios.resources
+C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmClientes.resources
+C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmMovimentacao.resources
+C:\Users\admin\Documents\Adryan\siscar\UI\obj\Debug\UI.frmEstoque.resources
